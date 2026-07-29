@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — OneFolder</title>
+<link rel="icon" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         color: #1a1a1a; background: #ffffff; margin: 0; padding: 0; line-height: 1.6; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+  .back { display: inline-block; margin-bottom: 32px; color: #79797C; text-decoration: none;
+          font-size: 0.9em; font-weight: 500; }
+  .back:hover { color: #1a1a1a; }
+  h1 { font-size: 1.7em; margin-bottom: 4px; }
+  .meta { color: #666; font-size: 0.92em; margin-bottom: 32px; }
+  h2 { font-size: 1.15em; margin-top: 32px; margin-bottom: 8px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: #0a58ca; }
+</style>
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">← OneFolder</a>
+<h1>Politique de confidentialité</h1>
+<p class="meta">Application OneFolder · Dernière mise à jour : 26 juillet 2026</p>
+
+<p>La présente politique de confidentialité décrit la manière dont OneFolder (« l'Application », « nous ») collecte, utilise et protège vos données personnelles, conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés.</p>
+
+<h2>1. Qui est responsable du traitement&nbsp;?</h2>
+<p>Le responsable du traitement des données personnelles collectées via l'application mobile OneFolder (« l'Application ») est&nbsp;:</p>
+<p>Julien Cochard, éditeur de l'application OneFolder<br>
+Contact&nbsp;: <a href="mailto:contact@onefolder.fr">contact@onefolder.fr</a></p>
+
+<h2>2. Qu'est-ce que OneFolder&nbsp;?</h2>
+<p>OneFolder est une application mobile qui permet de scanner, organiser, annoter et exporter des factures et reçus. L'accès au service cloud nécessite un compte créé avec une adresse e-mail (connexion par code à usage unique).</p>
+
+<h2>3. Quelles données collectons-nous&nbsp;?</h2>
+<p>Selon l'usage de l'Application, nous pouvons traiter les catégories suivantes&nbsp;:</p>
+<ul>
+  <li><strong>Données de compte</strong>&nbsp;: adresse e-mail utilisée pour l'authentification (envoi d'un code OTP).</li>
+  <li><strong>Contenu utilisateur</strong>&nbsp;: informations de facture saisies ou préremplies (nom du commerçant, adresse, date, montant, TVA éventuelle, notes), labels personnalisés, et images des factures (photos / scans / fichiers importés).</li>
+  <li><strong>Données techniques de session</strong>&nbsp;: jetons d'authentification stockés de façon sécurisée sur l'appareil pour maintenir la connexion.</li>
+  <li><strong>Permissions appareil</strong>&nbsp;: l'Application peut demander l'accès à la caméra et à la photothèque uniquement pour capturer ou importer des factures. Le microphone n'est pas utilisé.</li>
+</ul>
+<p>Nous ne collectons pas intentionnellement de données de paiement bancaire au-delà de ce qui apparaît sur les documents que vous choisissez d'importer. OneFolder n'intègre pas de publicité ni d'outil d'analytics tiers dans l'Application à la date de cette politique.</p>
+
+<h2>4. Pour quelles finalités&nbsp;?</h2>
+<ul>
+  <li>Créer et sécuriser votre compte (authentification par e-mail / OTP).</li>
+  <li>Fournir les fonctionnalités de scan, classement, recherche, édition et export (PDF / Excel).</li>
+  <li>Extraire automatiquement certaines informations de facture via une analyse OCR (préremplissage).</li>
+  <li>Synchroniser vos données entre appareils lorsque vous êtes connecté.</li>
+  <li>Assurer la sécurité, la maintenance et le support du service.</li>
+  <li>Respecter nos obligations légales le cas échéant.</li>
+</ul>
+
+<h2>5. Bases légales (RGPD)</h2>
+<ul>
+  <li><strong>Exécution du contrat</strong>&nbsp;: fourniture du service OneFolder demandé par l'utilisateur.</li>
+  <li><strong>Intérêt légitime</strong>&nbsp;: sécurité, prévention des abus, amélioration de la fiabilité du service.</li>
+  <li><strong>Obligation légale</strong> lorsque applicable.</li>
+  <li><strong>Consentement</strong> pour certains accès appareil (caméra, photos), gérés au niveau du système d'exploitation.</li>
+</ul>
+
+<h2>6. Où et comment vos données sont-elles stockées&nbsp;?</h2>
+<ul>
+  <li><strong>Compte connecté</strong>&nbsp;: vos factures, labels et photos sont stockés dans notre infrastructure cloud fournie par Supabase (base de données et stockage de fichiers). Le projet est hébergé dans l'Union européenne (région Irlande / West EU au moment de la rédaction). L'accès cloud est restreint à votre compte (contrôles d'accès de type «&nbsp;row level security&nbsp;»).</li>
+  <li><strong>Session</strong>&nbsp;: les jetons de connexion sont conservés localement sur votre appareil via un stockage sécurisé du système (Secure Store).</li>
+  <li><strong>Mode hors connexion / secours local</strong>&nbsp;: certaines données peuvent être mises en cache localement sur l'appareil pour le fonctionnement de l'Application.</li>
+</ul>
+
+<h2>7. Analyse OCR (Mistral)</h2>
+<p>Lorsque vous lancez l'analyse d'une facture, les images concernées sont transmises de façon sécurisée à une fonction serveur OneFolder (hébergée chez Supabase), qui fait appel au service d'OCR / extraction de Mistral AI afin de préremplir certains champs (commerçant, adresse, date, montant).</p>
+<p>Les images et le texte issu de l'OCR sont traités uniquement pour cette finalité d'extraction. La clé d'API Mistral n'est pas intégrée dans l'application mobile&nbsp;; elle est conservée côté serveur.</p>
+<p>Fournisseur&nbsp;: Mistral AI (société établie en France / UE). Pour plus d'informations, consultez la documentation et la politique de confidentialité de Mistral.</p>
+
+<h2>8. Destinataires et sous-traitants</h2>
+<p>Dans le cadre du service, vos données peuvent être traitées par&nbsp;:</p>
+<ul>
+  <li><strong>Supabase</strong> — authentification, base de données, stockage fichiers, fonctions serveur.</li>
+  <li><strong>Mistral AI</strong> — OCR et extraction d'informations à partir des images de factures.</li>
+  <li><strong>Prestataire d'envoi d'e-mails d'authentification</strong> configuré via Supabase (ex. service SMTP type Resend) pour livrer les codes OTP.</li>
+</ul>
+<p>Nous ne vendons pas vos données personnelles. Nous ne les partageons pas à des annonceurs.</p>
+
+<h2>9. Transferts hors UE</h2>
+<p>Nous privilégions un hébergement dans l'UE (Supabase West EU). Certains sous-traitants peuvent opérer des traitements ou des supports techniques impliquant des transferts hors UE. Dans ce cas, des garanties appropriées (clauses contractuelles types ou mécanismes équivalents) sont mises en place avec les prestataires concernés.</p>
+
+<h2>10. Durées de conservation</h2>
+<ul>
+  <li><strong>Compte (adresse e-mail)</strong>&nbsp;: conservée tant que votre compte est actif, puis supprimée dans un délai de 24 heures après la suppression du compte.</li>
+  <li><strong>Factures et données extraites</strong>&nbsp;: conservées tant que vous ne les supprimez pas et tant que votre compte est actif. La suppression d'une facture dans l'Application entraîne sa suppression de nos serveurs dans un délai de 24 heures.</li>
+  <li><strong>Session</strong>&nbsp;: jusqu'à déconnexion ou expiration / invalidation du jeton.</li>
+  <li><strong>Logs techniques</strong>&nbsp;: conservés pour une durée limitée nécessaire à la sécurité et au diagnostic.</li>
+</ul>
+<p>Vous pouvez vous déconnecter à tout moment depuis l'Application. La déconnexion met fin à la session cloud&nbsp;; elle ne supprime pas automatiquement le contenu déjà synchronisé sur nos serveurs. La suppression de votre compte, disponible dans l'Application, entraîne la suppression de vos données dans les délais indiqués ci-dessus.</p>
+
+<h2>11. Vos droits</h2>
+<p>Conformément au RGPD, vous disposez selon les cas des droits d'accès, de rectification, d'effacement, de limitation, d'opposition, de portabilité, et du droit d'introduire une réclamation auprès de la CNIL (ou de l'autorité de votre pays de résidence).</p>
+<p>Pour exercer vos droits&nbsp;: <a href="mailto:contact@onefolder.fr">contact@onefolder.fr</a></p>
+
+<h2>12. Sécurité</h2>
+<p>Nous mettons en œuvre des mesures raisonnables pour protéger vos données&nbsp;: authentification par code, contrôles d'accès cloud par utilisateur, stockage privé des photos de factures, conservation des secrets d'API côté serveur, et stockage sécurisé des sessions sur l'appareil. Aucun système n'étant infaillible, nous vous invitons à protéger l'accès à votre téléphone et à votre e-mail.</p>
+
+<h2>13. Données des mineurs</h2>
+<p>OneFolder n'est pas destiné aux enfants de moins de 16 ans. Si vous pensez qu'un mineur nous a transmis des données, contactez-nous pour suppression.</p>
+
+<h2>14. Exports PDF / Excel</h2>
+<p>Les exports sont générés sur votre appareil (fichiers temporaires / cache) et ouverts via les outils système. Toute transmission ultérieure (e-mail, messagerie, cloud personnel) est sous votre responsabilité et régie par les services que vous utilisez.</p>
+
+<h2>15. Modifications</h2>
+<p>Nous pouvons mettre à jour cette politique. La date de mise à jour figurera en tête du document. En cas de changement important, nous pourrons vous en informer dans l'Application ou par e-mail.</p>
+
+<h2>16. Contact</h2>
+<p>Pour toute question relative à cette politique ou à vos données&nbsp;: <a href="mailto:contact@onefolder.fr">contact@onefolder.fr</a></p>
+</main>
+</body>
+</html>
