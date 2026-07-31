@@ -28,7 +28,7 @@
 <main>
 <a class="back" href="../index.html">← OneFolder</a>
 <h1>Politique de confidentialité</h1>
-<p class="meta">Application OneFolder · Dernière mise à jour : 26 juillet 2026</p>
+<p class="meta">Application OneFolder · Dernière mise à jour : 31 juillet 2026</p>
 
 <p>La présente politique de confidentialité décrit la manière dont OneFolder (« l'Application », « nous ») collecte, utilise et protège vos données personnelles, conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés.</p>
 
@@ -47,8 +47,9 @@ Contact&nbsp;: <a href="mailto:contact@onefolder.fr">contact@onefolder.fr</a></p
   <li><strong>Contenu utilisateur</strong>&nbsp;: informations de facture saisies ou préremplies (nom du commerçant, adresse, date, montant, TVA éventuelle, notes), labels personnalisés, et images des factures (photos / scans / fichiers importés).</li>
   <li><strong>Données techniques de session</strong>&nbsp;: jetons d'authentification stockés de façon sécurisée sur l'appareil pour maintenir la connexion.</li>
   <li><strong>Permissions appareil</strong>&nbsp;: l'Application peut demander l'accès à la caméra et à la photothèque uniquement pour capturer ou importer des factures. Le microphone n'est pas utilisé.</li>
+  <li><strong>Données techniques de diagnostic</strong>&nbsp;: en cas d'erreur ou de plantage (et pour certains indicateurs de fiabilité comme le résultat d'une analyse OCR&nbsp;: succès avec champs remplis, succès sans champs, ou échec), des informations techniques peuvent être transmises à notre outil de monitoring (type d'appareil, système d'exploitation, version de l'Application, traces d'erreur / stack traces). Les images de factures et le texte OCR ne sont pas envoyés à cet outil.</li>
 </ul>
-<p>Nous ne collectons pas intentionnellement de données de paiement bancaire au-delà de ce qui apparaît sur les documents que vous choisissez d'importer. OneFolder n'intègre pas de publicité ni d'outil d'analytics tiers dans l'Application à la date de cette politique.</p>
+<p>Nous ne collectons pas intentionnellement de données de paiement bancaire au-delà de ce qui apparaît sur les documents que vous choisissez d'importer. OneFolder n'intègre pas de publicité. Un outil de diagnostic d'erreurs tiers (Sentry) est utilisé pour la fiabilité du service, comme décrit ci-dessous&nbsp;; il ne s'agit pas d'un outil de publicité ni de profilage marketing.</p>
 
 <h2>4. Pour quelles finalités&nbsp;?</h2>
 <ul>
@@ -56,14 +57,14 @@ Contact&nbsp;: <a href="mailto:contact@onefolder.fr">contact@onefolder.fr</a></p
   <li>Fournir les fonctionnalités de scan, classement, recherche, édition et export (PDF / Excel).</li>
   <li>Extraire automatiquement certaines informations de facture via une analyse OCR (préremplissage).</li>
   <li>Synchroniser vos données entre appareils lorsque vous êtes connecté.</li>
-  <li>Assurer la sécurité, la maintenance et le support du service.</li>
+  <li>Assurer la sécurité, la maintenance, le diagnostic des erreurs / plantages et le support du service.</li>
   <li>Respecter nos obligations légales le cas échéant.</li>
 </ul>
 
 <h2>5. Bases légales (RGPD)</h2>
 <ul>
   <li><strong>Exécution du contrat</strong>&nbsp;: fourniture du service OneFolder demandé par l'utilisateur.</li>
-  <li><strong>Intérêt légitime</strong>&nbsp;: sécurité, prévention des abus, amélioration de la fiabilité du service.</li>
+  <li><strong>Intérêt légitime</strong>&nbsp;: sécurité, prévention des abus, amélioration de la fiabilité du service (notamment monitoring des erreurs et plantages).</li>
   <li><strong>Obligation légale</strong> lorsque applicable.</li>
   <li><strong>Consentement</strong> pour certains accès appareil (caméra, photos), gérés au niveau du système d'exploitation.</li>
 </ul>
@@ -80,44 +81,50 @@ Contact&nbsp;: <a href="mailto:contact@onefolder.fr">contact@onefolder.fr</a></p
 <p>Les images et le texte issu de l'OCR sont traités uniquement pour cette finalité d'extraction. La clé d'API Mistral n'est pas intégrée dans l'application mobile&nbsp;; elle est conservée côté serveur.</p>
 <p>Fournisseur&nbsp;: Mistral AI (société établie en France / UE). Pour plus d'informations, consultez la documentation et la politique de confidentialité de Mistral.</p>
 
-<h2>8. Destinataires et sous-traitants</h2>
+<h2>8. Diagnostic d'erreurs (Sentry)</h2>
+<p>Pour détecter et corriger les plantages et erreurs de l'Application, nous utilisons Sentry (Functional Software, Inc.), configuré sur l'infrastructure européenne de Sentry.</p>
+<p>Sont notamment transmis&nbsp;: type d'appareil, système d'exploitation, version de l'Application, traces techniques d'erreur, et des indicateurs agrégés de fiabilité (par exemple le résultat d'une analyse OCR&nbsp;: champs remplis, aucun champ, ou échec). Nous ne transmettons pas volontairement à Sentry les images de factures, le texte OCR, ni le contenu détaillé des factures.</p>
+<p>Pour plus d'informations&nbsp;: politique de confidentialité de Sentry.</p>
+
+<h2>9. Destinataires et sous-traitants</h2>
 <p>Dans le cadre du service, vos données peuvent être traitées par&nbsp;:</p>
 <ul>
   <li><strong>Supabase</strong> — authentification, base de données, stockage fichiers, fonctions serveur.</li>
   <li><strong>Mistral AI</strong> — OCR et extraction d'informations à partir des images de factures.</li>
+  <li><strong>Sentry (Functional Software)</strong> — monitoring des erreurs et plantages (diagnostic technique), avec hébergement européen.</li>
   <li><strong>Prestataire d'envoi d'e-mails d'authentification</strong> configuré via Supabase (ex. service SMTP type Resend) pour livrer les codes OTP.</li>
 </ul>
 <p>Nous ne vendons pas vos données personnelles. Nous ne les partageons pas à des annonceurs.</p>
 
-<h2>9. Transferts hors UE</h2>
-<p>Nous privilégions un hébergement dans l'UE (Supabase West EU). Certains sous-traitants peuvent opérer des traitements ou des supports techniques impliquant des transferts hors UE. Dans ce cas, des garanties appropriées (clauses contractuelles types ou mécanismes équivalents) sont mises en place avec les prestataires concernés.</p>
+<h2>10. Transferts hors UE</h2>
+<p>Nous privilégions un hébergement dans l'UE (Supabase West EU&nbsp;; projet Sentry configuré sur la région européenne). Certains sous-traitants peuvent opérer des traitements ou des supports techniques impliquant des transferts hors UE. Dans ce cas, des garanties appropriées (clauses contractuelles types ou mécanismes équivalents) sont mises en place avec les prestataires concernés.</p>
 
-<h2>10. Durées de conservation</h2>
+<h2>11. Durées de conservation</h2>
 <ul>
   <li><strong>Compte (adresse e-mail)</strong>&nbsp;: conservée tant que votre compte est actif, puis supprimée dans un délai de 24 heures après la suppression du compte.</li>
   <li><strong>Factures et données extraites</strong>&nbsp;: conservées tant que vous ne les supprimez pas et tant que votre compte est actif. La suppression d'une facture dans l'Application entraîne sa suppression de nos serveurs dans un délai de 24 heures.</li>
   <li><strong>Session</strong>&nbsp;: jusqu'à déconnexion ou expiration / invalidation du jeton.</li>
-  <li><strong>Logs techniques</strong>&nbsp;: conservés pour une durée limitée nécessaire à la sécurité et au diagnostic.</li>
+  <li><strong>Logs techniques et événements de diagnostic (y compris via Sentry)</strong>&nbsp;: conservés pour une durée limitée nécessaire à la sécurité, au diagnostic et à l'amélioration de la fiabilité du service.</li>
 </ul>
 <p>Vous pouvez vous déconnecter à tout moment depuis l'Application. La déconnexion met fin à la session cloud&nbsp;; elle ne supprime pas automatiquement le contenu déjà synchronisé sur nos serveurs. La suppression de votre compte, disponible dans l'Application, entraîne la suppression de vos données dans les délais indiqués ci-dessus.</p>
 
-<h2>11. Vos droits</h2>
+<h2>12. Vos droits</h2>
 <p>Conformément au RGPD, vous disposez selon les cas des droits d'accès, de rectification, d'effacement, de limitation, d'opposition, de portabilité, et du droit d'introduire une réclamation auprès de la CNIL (ou de l'autorité de votre pays de résidence).</p>
 <p>Pour exercer vos droits&nbsp;: <a href="mailto:contact@onefolder.fr">contact@onefolder.fr</a></p>
 
-<h2>12. Sécurité</h2>
+<h2>13. Sécurité</h2>
 <p>Nous mettons en œuvre des mesures raisonnables pour protéger vos données&nbsp;: authentification par code, contrôles d'accès cloud par utilisateur, stockage privé des photos de factures, conservation des secrets d'API côté serveur, et stockage sécurisé des sessions sur l'appareil. Aucun système n'étant infaillible, nous vous invitons à protéger l'accès à votre téléphone et à votre e-mail.</p>
 
-<h2>13. Données des mineurs</h2>
+<h2>14. Données des mineurs</h2>
 <p>OneFolder n'est pas destiné aux enfants de moins de 16 ans. Si vous pensez qu'un mineur nous a transmis des données, contactez-nous pour suppression.</p>
 
-<h2>14. Exports PDF / Excel</h2>
+<h2>15. Exports PDF / Excel</h2>
 <p>Les exports sont générés sur votre appareil (fichiers temporaires / cache) et ouverts via les outils système. Toute transmission ultérieure (e-mail, messagerie, cloud personnel) est sous votre responsabilité et régie par les services que vous utilisez.</p>
 
-<h2>15. Modifications</h2>
+<h2>16. Modifications</h2>
 <p>Nous pouvons mettre à jour cette politique. La date de mise à jour figurera en tête du document. En cas de changement important, nous pourrons vous en informer dans l'Application ou par e-mail.</p>
 
-<h2>16. Contact</h2>
+<h2>17. Contact</h2>
 <p>Pour toute question relative à cette politique ou à vos données&nbsp;: <a href="mailto:contact@onefolder.fr">contact@onefolder.fr</a></p>
 </main>
 </body>
