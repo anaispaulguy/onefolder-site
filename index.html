@@ -254,11 +254,16 @@
   }
   .feature-icon img { width: 100%; }
 
+  /* Drop-shadow must live on the reveal/transform element, with padding so blur isn't clipped. */
+  .feature-org .feature-media {
+    filter: drop-shadow(0 22px 40px rgba(62, 140, 255, 0.28));
+    padding: 40px;
+    margin: -40px;
+  }
   .feature-folder {
     width: min(220px, 55vw);
     margin: 0 auto;
-    overflow: visible;
-    filter: drop-shadow(0 22px 40px rgba(62, 140, 255, 0.28));
+    display: block;
   }
 
   .feature-export-visual {
