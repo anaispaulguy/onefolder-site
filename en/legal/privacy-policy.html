@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — OneFolder</title>
+<link rel="canonical" href="https://onefolder.fr/en/legal/privacy-policy.html">
+<link rel="alternate" hreflang="fr" href="https://onefolder.fr/legal/politique-de-confidentialite.html">
+<link rel="alternate" hreflang="en" href="https://onefolder.fr/en/legal/privacy-policy.html">
+<link rel="alternate" hreflang="x-default" href="https://onefolder.fr/legal/politique-de-confidentialite.html">
+<link rel="icon" href="../../assets/favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         color: #1a1a1a; background: #ffffff; margin: 0; padding: 0; line-height: 1.6; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+  .back { display: inline-block; margin-bottom: 32px; color: #79797C; text-decoration: none;
+          font-size: 0.9em; font-weight: 500; }
+  .back:hover { color: #1a1a1a; }
+  h1 { font-size: 1.7em; margin-bottom: 4px; }
+  .meta { color: #666; font-size: 0.92em; margin-bottom: 32px; }
+  h2 { font-size: 1.15em; margin-top: 32px; margin-bottom: 8px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: #0a58ca; }
+  .lang { float: right; font-size: 0.9em; font-weight: 500; color: #79797C; }
+  .lang a { color: #79797C; text-decoration: none; }
+  .lang a[aria-current="page"] { color: #1a1a1a; }
+</style>
+</head>
+<body>
+<main>
+<nav class="lang" aria-label="Language"><a href="../../legal/politique-de-confidentialite.html">FR</a> · <a href="./privacy-policy.html" aria-current="page">EN</a></nav>
+<a class="back" href="../index.html">← OneFolder</a>
+<h1>Privacy Policy</h1>
+<p class="meta">OneFolder app · Last updated: 31 July 2026</p>
+<p>This is an English translation of the French original. In case of conflict, the French version prevails.</p>
+
+<p>This privacy policy describes how OneFolder (“the Application”, “we”) collects, uses, and protects your personal data, in accordance with the General Data Protection Regulation (GDPR) and the French Data Protection Act (loi Informatique et Libertés).</p>
+
+<h2>1. Who is the data controller?</h2>
+<p>The controller of personal data collected via the OneFolder mobile application (“the Application”) is:</p>
+<p>Julien Cochard, publisher of the OneFolder application<br>
+Contact: <a href="mailto:contact@onefolder.fr">contact@onefolder.fr</a></p>
+
+<h2>2. What is OneFolder?</h2>
+<p>OneFolder is a mobile app that lets you scan, organize, annotate, and export invoices and receipts. Access to the cloud service requires an account created with an email address (sign-in with a one-time code).</p>
+
+<h2>3. What data do we collect?</h2>
+<p>Depending on how you use the Application, we may process the following categories:</p>
+<ul>
+  <li><strong>Account data</strong>: email address used for authentication (sending an OTP code).</li>
+  <li><strong>User content</strong>: invoice information entered or pre-filled (merchant name, address, date, amount, any VAT, notes), custom labels, and invoice images (photos / scans / imported files).</li>
+  <li><strong>Session technical data</strong>: authentication tokens stored securely on the device to keep you signed in.</li>
+  <li><strong>Device permissions</strong>: the Application may request access to the camera and photo library solely to capture or import invoices. The microphone is not used.</li>
+  <li><strong>Diagnostic technical data</strong>: in the event of an error or crash (and for certain reliability indicators such as the result of an OCR analysis: success with fields filled, success with no fields, or failure), technical information may be sent to our monitoring tool (device type, operating system, Application version, error traces / stack traces). Invoice images and OCR text are not sent to this tool.</li>
+</ul>
+<p>We do not intentionally collect bank payment data beyond what appears on the documents you choose to import. OneFolder does not include advertising. A third-party error-diagnostics tool (Sentry) is used for service reliability, as described below; it is not an advertising or marketing-profiling tool.</p>
+
+<h2>4. For what purposes?</h2>
+<ul>
+  <li>Create and secure your account (email / OTP authentication).</li>
+  <li>Provide scan, filing, search, edit, and export features (PDF / Excel).</li>
+  <li>Automatically extract certain invoice information via OCR analysis (pre-fill).</li>
+  <li>Sync your data across devices when you are signed in.</li>
+  <li>Ensure security, maintenance, error / crash diagnosis, and support of the service.</li>
+  <li>Comply with our legal obligations where applicable.</li>
+</ul>
+
+<h2>5. Legal bases (GDPR)</h2>
+<ul>
+  <li><strong>Performance of the contract</strong>: providing the OneFolder service requested by the user.</li>
+  <li><strong>Legitimate interest</strong>: security, abuse prevention, improving service reliability (including error and crash monitoring).</li>
+  <li><strong>Legal obligation</strong> where applicable.</li>
+  <li><strong>Consent</strong> for certain device access (camera, photos), managed at the operating-system level.</li>
+</ul>
+
+<h2>6. Where and how is your data stored?</h2>
+<ul>
+  <li><strong>Signed-in account</strong>: your invoices, labels, and photos are stored in our cloud infrastructure provided by Supabase (database and file storage). The project is hosted in the European Union (Ireland / West EU region at the time of writing). Cloud access is restricted to your account (“row level security” access controls).</li>
+  <li><strong>Session</strong>: sign-in tokens are kept locally on your device via the system’s secure storage (Secure Store).</li>
+  <li><strong>Offline / local fallback mode</strong>: some data may be cached locally on the device for the Application to work.</li>
+</ul>
+
+<h2>7. OCR analysis (Mistral)</h2>
+<p>When you start analyzing an invoice, the relevant images are transmitted securely to a OneFolder server function (hosted on Supabase), which calls Mistral AI’s OCR / extraction service in order to pre-fill certain fields (merchant, address, date, amount).</p>
+<p>Images and text from OCR are processed solely for this extraction purpose. The Mistral API key is not embedded in the mobile app; it is kept on the server.</p>
+<p>Provider: Mistral AI (a company established in France / the EU). For more information, see Mistral’s documentation and privacy policy.</p>
+
+<h2>8. Error diagnostics (Sentry)</h2>
+<p>To detect and fix Application crashes and errors, we use Sentry (Functional Software, Inc.), configured on Sentry’s European infrastructure.</p>
+<p>In particular, we transmit: device type, operating system, Application version, technical error traces, and aggregated reliability indicators (for example the result of an OCR analysis: fields filled, no fields, or failure). We do not knowingly send invoice images, OCR text, or detailed invoice content to Sentry.</p>
+<p>For more information: Sentry’s privacy policy.</p>
+
+<h2>9. Recipients and processors</h2>
+<p>In the course of the service, your data may be processed by:</p>
+<ul>
+  <li><strong>Supabase</strong> — authentication, database, file storage, server functions.</li>
+  <li><strong>Mistral AI</strong> — OCR and information extraction from invoice images.</li>
+  <li><strong>Sentry (Functional Software)</strong> — error and crash monitoring (technical diagnosis), with European hosting.</li>
+  <li><strong>Authentication email sending provider</strong> configured via Supabase (e.g. an SMTP service such as Resend) to deliver OTP codes.</li>
+</ul>
+<p>We do not sell your personal data. We do not share it with advertisers.</p>
+
+<h2>10. Transfers outside the EU</h2>
+<p>We favor hosting in the EU (Supabase West EU; Sentry project configured on the European region). Some processors may carry out processing or technical support involving transfers outside the EU. In that case, appropriate safeguards (standard contractual clauses or equivalent mechanisms) are put in place with the providers concerned.</p>
+
+<h2>11. Retention periods</h2>
+<ul>
+  <li><strong>Account (email address)</strong>: kept for as long as your account is active, then deleted within 24 hours of account deletion.</li>
+  <li><strong>Invoices and extracted data</strong>: kept until you delete them and for as long as your account is active. Deleting an invoice in the Application results in its deletion from our servers within 24 hours.</li>
+  <li><strong>Session</strong>: until sign-out or expiry / invalidation of the token.</li>
+  <li><strong>Technical logs and diagnostic events (including via Sentry)</strong>: kept for a limited period necessary for security, diagnosis, and improving service reliability.</li>
+</ul>
+<p>You can sign out at any time from the Application. Signing out ends the cloud session; it does not automatically delete content already synced to our servers. Deleting your account, available in the Application, results in deletion of your data within the timeframes stated above.</p>
+
+<h2>12. Your rights</h2>
+<p>Under the GDPR, you have, as applicable, rights of access, rectification, erasure, restriction, objection, portability, and the right to lodge a complaint with the CNIL (or the authority in your country of residence).</p>
+<p>To exercise your rights: <a href="mailto:contact@onefolder.fr">contact@onefolder.fr</a></p>
+
+<h2>13. Security</h2>
+<p>We implement reasonable measures to protect your data: code-based authentication, per-user cloud access controls, private storage of invoice photos, server-side storage of API secrets, and secure storage of sessions on the device. No system is infallible; we encourage you to protect access to your phone and email.</p>
+
+<h2>14. Children’s data</h2>
+<p>OneFolder is not intended for children under 16. If you believe a minor has sent us data, contact us for deletion.</p>
+
+<h2>15. PDF / Excel exports</h2>
+<p>Exports are generated on your device (temporary files / cache) and opened with system tools. Any later transmission (email, messaging, personal cloud) is your responsibility and governed by the services you use.</p>
+
+<h2>16. Changes</h2>
+<p>We may update this policy. The update date will appear at the top of the document. In the event of a material change, we may inform you in the Application or by email.</p>
+
+<h2>17. Contact</h2>
+<p>For any question about this policy or your data: <a href="mailto:contact@onefolder.fr">contact@onefolder.fr</a></p>
+</main>
+</body>
+</html>
