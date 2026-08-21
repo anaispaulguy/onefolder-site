@@ -101,17 +101,25 @@
   .lang-switch {
     display: flex;
     align-items: center;
-    gap: 10px;
     margin-left: auto;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    padding: 3px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.06);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
   }
   .lang-switch a {
     text-decoration: none;
-    color: var(--muted-soft);
+    color: var(--ink);
+    padding: 6px 10px;
+    border-radius: 999px;
+    line-height: 1;
   }
-  .lang-switch a[aria-current="page"] { color: var(--ink); }
+  .lang-switch a[aria-current="page"] {
+    background: var(--white);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  }
 
   /* ---------- Buttons ---------- */
   .btn {
